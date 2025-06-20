@@ -1,0 +1,2 @@
+- Colocar responsividade mobile
+- Variáveis CSS e rem %

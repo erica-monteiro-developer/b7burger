@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+}
+
+.header {
+    background-color: #141414;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo + links */
+.leftside {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo a {
+    font-family: "Calistoga", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.logo .dot {
+    color: #FE6A0F;
+}
+
+.logo {
+    margin-right: 35px;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.nav li {
+    margin: 0 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #FFF;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    color: #999;
+}
+
+/* Botão CTA + menu mobile */
+.rightside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-outline {
+    display: block;
+    border: 1px solid #FFF;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    color: #999;
+    border-color: #999;
+}
+
+.menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.menu-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    height: 6px;
+    background-color: #FFF;
+    border-radius: 2px;
+}
+
+/* Seção Hero */
+.hero {
+    background-color: #141414;
+}
+
+.hero .container {
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero .left-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero .left-group h1 {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-family: "Calistoga", serif;
+}
+
+.hero .left-group h1 span {
+    display: block;
+    font-family: "Calistoga", serif;
+}
+
+.hero .left-group p {
+    font-size: 20px;
+    color: #EEE;
+    margin-bottom: 30px;
+}
+
+.btn-fill {
+    background-color: #FE6A0F;
+    color: #FFF;
+    padding: 15px 70px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-fill:hover {
+    background-color: #ff8800;
+}
+
+.hero .right-group {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .rightside img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+}
+
+/* Seção de busca */
+.search {
+    background-color: #1C1C1C;
+    padding: 60px 0;
+    color: #FFF;
+}
+
+.search .container {
+    /* flex-direction: column;
+    align-items: flex-start; */
+    display: block;
+}
+
+.search-title h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.search-sides {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.search-left,
+.search-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Input de busca */
+.input-wrapper {
+    background-color: #2C2C2C;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: #888;
+}
+
+.input-wrapper .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    object-fit: contain;
+    display: block;
+}
+
+.input-wrapper input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    flex: 1;
+}
+
+/* Select dropdown */
+.search-right select {
+    width: 100%;
+    padding: 20px;
+    background-color: #2C2C2C;
+    color: #FFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    appearance: none;
+    /* iconezinho no cantinho do <select> */
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+}
+
+/* Seção principal */
+.burgers {
+    background-color: #141414;
+    padding: 60px 0;
+}
+
+.burgers .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.burger-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Card geral */
+.burger-card {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagem ocupa metade superior */
+.card-image {
+    background-color: #3a3a3a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Texto */
+.card-info {
+    background-color: #1e1e1e;
+    padding: 20px;
+    color: white;
+}
+
+.card-info .type {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.card-info .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-info .price {
+    font-size: 18px;
+    color: orange;
+    font-weight: bold;
+}
+
+/* Tag de promoção */
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: orange;
+    color: white;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #1F1F1F;
+    padding: 70px 0;
+}
+
+footer .logo a {
+    font-size: 30px;
+}
+
+.footer-right p {
+    color: #666;
+    font-size: 22px;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+
+    /* Mostra o menu hamburger nas telas menores */
+    .menu {
+        display: flex;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .left-group h1 {
+        font-size: 50px;
+    }
+
+    .hero .left-group p {
+        font-size: 18px;
+    }
+
+    .hero .rightside img {
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .search-title h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .search-sides {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search-left,
+    .search-right {
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
